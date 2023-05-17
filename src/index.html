@@ -4,20 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .darken-overlay {
+        background: rgba(0, 0, 0, 0);
+      }
+    </style>
+    <script>
+      $(function () {
+        // Load header.html and insert it into the <header> element
+        $("header").load("/src/sections/header.html");
+      });
+      $(function () {
+        // Load header.html and insert it into the <header> element
+        $("hero").load("/src/sections/hero.html");
+      });
+      $(function () {
+        // Load header.html and insert it into the <header> element
+        $("contact").load("/src/sections/contact.html");
+      });
+      $(function () {
+        // Load header.html and insert it into the <header> element
+        $("gallery").load("/src/sections/gallery.html");
+      });
+      $(function () {
+        // Load header.html and insert it into the <header> element
+        $("poetry").load("/src/sections/poetry.html");
+      });
+      $(function () {
+        // Load header.html and insert it into the <header> element
+        $("footer").load("/src/sections/footer.html");
+      });
+    </script>
   </head>
-  <body class="px-20 max-w-[1440px] mx-auto">
-    <header>
-      <nav class="flex flex-between">
-        <div><img src="./assets/logo.svg" alt="" /></div>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <body class="max-w-[1487px] mx-auto">
+    <div class="relative">
+      <div class="pr-20 pl-44 w-full h-screen flex flex-col">
+        <header></header>
+        <hero class="flex-1"></hero>
+      </div>
+      <div
+        class="absolute inset-0 -z-10 w-full top-0 grid grid-cols-5 grid-rows-1 h-screen"
+      >
+        <div class="col-span-2 grid grid-rows-2">
+          <div class="bg-white"></div>
+          <div class="bg-black"></div>
+        </div>
+        <div
+          class="col-span-3 row-span-2 bg-blend-hard-light bg-cover bg-center"
+          style="background-image: url('./assets/1M6A6491 1.png')"
+        ></div>
+      </div>
+    </div>
+    <contact></contact>
+    <gallery></gallery>
+    <poetry></poetry>
+    <footer></footer>
   </body>
 </html>
